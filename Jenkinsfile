@@ -16,6 +16,7 @@ pipeline {
                 echo "Testing"
                 dir ("jenkins_selenium") {
                     bat "python --version"
+                    bat "python main.py"
                 }
             }
         }
