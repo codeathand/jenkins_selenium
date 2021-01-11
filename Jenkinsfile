@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { docker { image 'python:3.5.1' } }
     stages {
         stage('CleanWorkspace') {
             steps {
@@ -15,9 +15,7 @@ pipeline {
             steps {
                 echo "Testing"
                 dir ("jenkins_selenium") {
-                    withPythonEnv('python3') {
-                        bat "python main.py"
-                    }
+                    bat "python --version"
                 }
             }
         }
