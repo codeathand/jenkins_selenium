@@ -15,7 +15,10 @@ pipeline {
             steps {
                 echo "Testing"
                 dir ("jenkins_selenium") {
-                    bat "python3 main.py"
+                    withPythonEnv('python3') {
+                        bat 'python --version'
+                        bat "python3 main.py"
+                    }
                 }
             }
         }
