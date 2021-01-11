@@ -16,7 +16,7 @@ pipeline {
                 echo "Testing"
                 dir ("jenkins_selenium") {
                     withPythonEnv('Python3') {
-                        bat 'python --version'
+                        bat 'python3 --version'
                     }
                 }
             }
