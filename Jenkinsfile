@@ -14,11 +14,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Testing"
-                    withPythonEnv('python3') {
-                        dir ("jenkins_selenium") {
-                            bat 'python --version'
-                        }
+                dir ("jenkins_selenium") {
+                    withPythonEnv('Python3') {
+                        bat 'python --version'
                     }
+                }
             }
         }
         stage('Deploy') {
