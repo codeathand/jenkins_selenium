@@ -25,7 +25,7 @@ class PageElements:
 
     def get_play_button(self):
         play_button = self.wait_variable.until(
-            expected_conditions.presence_of_element_located((By.TAG_NAME, Locator.play_button)))
+            expected_conditions.presence_of_element_located((By.CLASS_NAME, Locator.play_button)))
         if play_button.is_displayed() is True:
             print(play_button.text)
         try:
