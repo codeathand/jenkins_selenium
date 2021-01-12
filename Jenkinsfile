@@ -17,6 +17,7 @@ pipeline {
                 dir ("jenkins_selenium") {
                     withPythonEnv('Python3') {
                         bat 'python --version'
+                        bat 'pip install selenium'
                         bat 'python main.py'
                     }
                 }
