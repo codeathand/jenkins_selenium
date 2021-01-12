@@ -24,8 +24,9 @@ class PageElements:
         return game_name
 
     def get_play_button(self):
+        self.driver.switch_to.frame(self.driver.find_element_by_tag_name("iframe"))
         play_button = self.wait_variable.until(
-            expected_conditions.presence_of_element_located((By.XPATH, Locator.play_button)))
+            expected_conditions.presence_of_element_located((By.CLASS_NAME, Locator.play_button)))
         if play_button.is_displayed() is True:
             print(play_button.text)
         try:
