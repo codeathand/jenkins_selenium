@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo "Testing"
                 dir ("jenkins_selenium") {
-                    withPythonEnv('C:\\Users\\DELL E5540\\AppData\\Local\\Programs\\Python\\Python39') {
+                    withPythonEnv('Python3') {
                         bat 'python --version'
                     }
                 }
