@@ -22,3 +22,14 @@ class PageElements:
         except AssertionError:
             print('Game name is invalid')
         return game_name
+
+    def get_play_button(self):
+        play_button = self.wait_variable.until(
+            expected_conditions.presence_of_element_located((By.TAG_NAME, Locator.play_button)))
+        if play_button.is_displayed() is True:
+            print(play_button.text)
+        try:
+            assert play_button.text == 'Ok, Play Now!'
+        except AssertionError:
+            print('Play button is invalid')
+        return play_button

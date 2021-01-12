@@ -18,3 +18,6 @@ class Functions:
     def game_name(self):
         self.page_elements.get_game_name()
 
+    def play_button(self):
+        self.page_elements.get_play_button()
+

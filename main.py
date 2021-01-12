@@ -20,3 +20,4 @@ PATH_CHROME = os.getcwd() + '\\drivers\\chromedriver_win32\\chromedriver.exe'
 main_test_chrome = Functions(webdriver.Chrome(options=options))
 main_test_chrome.setup()
 main_test_chrome.game_name()
+main_test_chrome.play_button()
